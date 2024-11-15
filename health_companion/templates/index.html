@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Companion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Health Companion</h1>
+        <div>
+            <button onclick="fetchMetrics()">Refresh Metrics</button>
+            <div id="metrics"></div>
+        </div>
+        <div>
+            <h3>Enter your health metrics</h3>
+            <input type="number" id="steps" placeholder="Steps" required>
+            <input type="number" id="heart_rate" placeholder="Heart Rate" required>
+            <input type="number" id="calories" placeholder="Calories Burned" required>
+            <button onclick="saveMetrics()">Save Metrics</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
